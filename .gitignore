@@ -25,3 +25,6 @@ hs_err_pid*
 .idea
 
 target
+
+src/test/resources/config.properties
+src/main/resources/config.properties
