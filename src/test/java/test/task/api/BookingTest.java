@@ -1,15 +1,11 @@
 package test.task.api;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import test.task.api.clients.BookingClient;
 import test.task.api.clients.SignInClient;
 import test.task.api.models.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class BookingTest {
     private BookingClient client;
@@ -19,8 +15,8 @@ public class BookingTest {
     @BeforeClass
     public void beforeClass() {
         SignInClient clientSI = new SignInClient();
-        PostRequest credential = new PostRequest("admin", "password123");
-        PostResponse responseSI = clientSI.post(credential);
+        SignInRequest credential = new SignInRequest("admin", "password123");
+        SignInResponse responseSI = clientSI.post(credential);
         client = new BookingClient(responseSI.getToken());
         bookingDates.setCheckin("2018-01-01");
         bookingDates.setCheckout("2019-01-01");
