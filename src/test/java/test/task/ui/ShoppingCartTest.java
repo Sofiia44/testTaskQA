@@ -30,7 +30,7 @@ public class ShoppingCartTest extends BaseTestRunner {
     }
 
     @Test(priority = 2)
-    public void addItemToShoppingCart() {
+    public void addFilteredItemToShoppingCartAndDeleteIt() {
         driver.get(configProperties.getComputerWebUrl());
         String expectedPrice = new ExpensiveComputerPage(driver)
                 .clickFastProcessorButton()
