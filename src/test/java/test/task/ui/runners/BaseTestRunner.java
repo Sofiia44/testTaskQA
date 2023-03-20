@@ -24,6 +24,7 @@ public class BaseTestRunner {
     protected void setDriver(ITestContext context) {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
+        options.addArguments("--remote-allow-origins=*");
 
         driver = new ChromeDriver(options);
         context.setAttribute("myDriver", driver);
