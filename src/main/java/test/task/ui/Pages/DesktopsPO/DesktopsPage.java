@@ -12,7 +12,7 @@ import static java.lang.String.format;
 import static org.openqa.selenium.By.*;
 
 public class DesktopsPage extends HeaderComponent {
-    private WebElement expensiveComputer = driver.findElement(xpath("//h2[@class='product-title']//a[contains(text(),'Build your own expensive computer')]"));
+//    private WebElement expensiveComputer = driver.findElement(xpath("//h2[@class='product-title']//a[contains(text(),'Build your own expensive computer')]"));
 
     private WebElement productsPageSize = driver.findElement(id("products-pagesize"));
     private WebElement productsOrderBy = driver.findElement(id("products-orderby"));
@@ -24,10 +24,6 @@ public class DesktopsPage extends HeaderComponent {
         super(driver);
     }
 
-    public ExpensiveComputerPage clickExpensiveButton() {
-        click(productsPageSize);
-        return new ExpensiveComputerPage(driver);
-    }
 
     public DesktopsPage clickProductsPageSizeButton() {
         click(productsPageSize);
@@ -49,10 +45,10 @@ public class DesktopsPage extends HeaderComponent {
         return new DesktopsPage(driver);
     }
 
-    public ExpensiveComputerPage clickAddToCartButton() {
-        click(addToCartButton);
-        return new ExpensiveComputerPage(driver);
-    }
+//    public ExpensiveComputerPage clickAddToCartButton() {
+//        click(addToCartButton);
+//        return new ExpensiveComputerPage(driver);
+//    }
 
     public String getExpensiveName(){
        return getText(driver.findElement(xpath(format("//span[text()='%s']//ancestor::div[@class='details']//h2/a",findExpensive()+"0"))));
