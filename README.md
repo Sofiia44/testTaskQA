@@ -1,3 +1,4 @@
+create file src/main/resources/config.properties and add lines
 
 ```properties
 base_web_url=https://speak-ukrainian.org.ua/dev/
