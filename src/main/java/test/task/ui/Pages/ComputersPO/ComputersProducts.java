@@ -3,7 +3,7 @@ package test.task.ui.Pages.ComputersPO;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import test.task.ui.Pages.DesktopsPO.DesktopsPage;
-import test.task.ui.components.HeaderComponent;
+import test.task.ui.pageComponents.HeaderComponent;
 
 import static org.openqa.selenium.By.xpath;
 

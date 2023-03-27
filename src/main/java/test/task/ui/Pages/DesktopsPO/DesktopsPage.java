@@ -3,7 +3,7 @@ package test.task.ui.Pages.DesktopsPO;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import test.task.ui.Pages.DesktopsPO.ExpensivePO.ExpensiveComputerPage;
-import test.task.ui.components.HeaderComponent;
+import test.task.ui.pageComponents.HeaderComponent;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,7 +18,7 @@ public class DesktopsPage extends HeaderComponent {
     private WebElement productsOrderBy = driver.findElement(id("products-orderby"));
     private WebElement fourItemsPerPage = driver.findElement(xpath("//option[text()='4']"));
     private WebElement fromHighToLowPrice = driver.findElement(xpath("//option[text()='Price: High to Low']"));
-    private WebElement addToCartButton = driver.findElement(xpath("(//input[@value='Add to cart'])[1]"));
+
 
     public DesktopsPage(WebDriver driver) {
         super(driver);
@@ -45,10 +45,6 @@ public class DesktopsPage extends HeaderComponent {
         return new DesktopsPage(driver);
     }
 
-//    public ExpensiveComputerPage clickAddToCartButton() {
-//        click(addToCartButton);
-//        return new ExpensiveComputerPage(driver);
-//    }
 
     public String getExpensiveName(){
        return getText(driver.findElement(xpath(format("//span[text()='%s']//ancestor::div[@class='details']//h2/a",findExpensive()+"0"))));

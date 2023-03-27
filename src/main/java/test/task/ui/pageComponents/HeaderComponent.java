@@ -1,17 +1,19 @@
-package test.task.ui.components;
+package test.task.ui.pageComponents;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import test.task.ui.BasePage;
-import test.task.ui.Pages.DesktopsPO.ExpensivePO.ExpensiveComputerPage;
+import test.task.ui.Pages.RegisterPO.RegisterPage;
 import test.task.ui.Pages.ShoppingCartPO.ShoppingCartPage;
 
+import static java.lang.String.format;
 import static org.openqa.selenium.By.*;
 
 public class HeaderComponent extends BasePage {
 
     private WebElement shoppingCart = driver.findElement(id("topcartlink"));
     private WebElement shoppingCartQuantity = driver.findElement(cssSelector("span.cart-qty"));
+    private WebElement registerButton = driver.findElement(xpath("//a[text()='Register']"));
 
     public HeaderComponent(WebDriver driver) {
         super(driver);
@@ -25,5 +27,11 @@ public class HeaderComponent extends BasePage {
     public String getShoppingCartQuantity(){
        return getText(shoppingCartQuantity);
     }
+
+    public RegisterPage clickRegisterButton(){
+        click(registerButton);
+        return new RegisterPage(driver);
+    }
+
 }
 
