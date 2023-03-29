@@ -1,6 +1,5 @@
 package test.task.ui;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import test.task.ui.Pages.ComputersPO.ComputersProducts;

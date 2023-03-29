@@ -1,11 +1,7 @@
 package test.task.ui;
 
-import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import test.task.ui.Pages.RegisterPO.FinalRegisterPage;
 import test.task.ui.Pages.RegisterPO.RegisterPage;
 import test.task.ui.runners.BaseTestRunner;
 

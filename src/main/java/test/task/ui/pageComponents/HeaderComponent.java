@@ -3,11 +3,9 @@ package test.task.ui.pageComponents;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import test.task.ui.BasePage;
-import test.task.ui.Pages.LoginPO.LoginPage;
 import test.task.ui.Pages.RegisterPO.RegisterPage;
 import test.task.ui.Pages.ShoppingCartPO.ShoppingCartPage;
 
-import static java.lang.String.format;
 import static org.openqa.selenium.By.*;
 
 public class HeaderComponent extends BasePage {

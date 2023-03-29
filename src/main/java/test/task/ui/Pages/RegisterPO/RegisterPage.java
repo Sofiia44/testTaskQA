@@ -2,7 +2,6 @@ package test.task.ui.Pages.RegisterPO;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import test.task.ui.HomePage;
 import test.task.ui.pageComponents.HeaderComponent;
 
 import static java.lang.String.format;
