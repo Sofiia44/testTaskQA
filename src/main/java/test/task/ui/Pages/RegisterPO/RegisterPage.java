@@ -1,24 +1,24 @@
 package test.task.ui.Pages.RegisterPO;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import test.task.ui.HomePage;
 import test.task.ui.pageComponents.HeaderComponent;
 
 import static java.lang.String.format;
-import static org.openqa.selenium.By.xpath;
+import static org.openqa.selenium.By.*;
 
 public class RegisterPage extends HeaderComponent {
 
-    private WebElement femaleButton = driver.findElement(By.id("gender-female"));
-    private WebElement firstNameInput = driver.findElement(By.id("FirstName"));
-    private WebElement lastNameInput = driver.findElement(By.id("LastName"));
-    private WebElement emailInput = driver.findElement(By.id("Email"));
-    private WebElement passwordInput = driver.findElement(By.id("Password"));
-    private WebElement confirmPasswordInput = driver.findElement(By.id("ConfirmPassword"));
-    private WebElement finishedRegisterButton = driver.findElement(By.id("register-button"));
+    private WebElement femaleButton = driver.findElement(id("gender-female"));
+    private WebElement firstNameInput = driver.findElement(id("FirstName"));
+    private WebElement lastNameInput = driver.findElement(id("LastName"));
+    private WebElement emailInput = driver.findElement(id("Email"));
+    private WebElement passwordInput = driver.findElement(id("Password"));
+    private WebElement confirmPasswordInput = driver.findElement(id("ConfirmPassword"));
+    private WebElement finishedRegisterButton = driver.findElement(id("register-button"));
+
+
 
     public RegisterPage(WebDriver driver) {
         super(driver);
@@ -81,5 +81,6 @@ public class RegisterPage extends HeaderComponent {
         visibility(xpath(format("//li[text()='The specified email already exists']", errMessage)));
         return driver.findElement(xpath(format("//li[text()='The specified email already exists']", errMessage))).isDisplayed();
     }
+
 
 }

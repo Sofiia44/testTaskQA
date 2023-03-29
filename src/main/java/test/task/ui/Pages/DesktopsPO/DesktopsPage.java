@@ -12,7 +12,6 @@ import static java.lang.String.format;
 import static org.openqa.selenium.By.*;
 
 public class DesktopsPage extends HeaderComponent {
-//    private WebElement expensiveComputer = driver.findElement(xpath("//h2[@class='product-title']//a[contains(text(),'Build your own expensive computer')]"));
 
     private WebElement productsPageSize = driver.findElement(id("products-pagesize"));
     private WebElement productsOrderBy = driver.findElement(id("products-orderby"));

@@ -1,27 +1,15 @@
 package test.task.ui;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import test.task.ui.Pages.RegisterPO.FinalRegisterPage;
 import test.task.ui.Pages.RegisterPO.RegisterPage;
 import test.task.ui.runners.BaseTestRunner;
 
 public class RegisterTest extends BaseTestRunner {
-
-
-    public static String generateRandomEmailAddress(String domain) {
-        String emailAddress = "";
-        String alphabet = "abcdefghijklmnopqrstuvwxyz";
-        while (emailAddress.length() < 5) {
-            int character = (int) (Math.random() * 26);
-            emailAddress += alphabet.substring(character, character + 1);
-        }
-        emailAddress += Integer.valueOf((int) (Math.random() * 99))
-                .toString();
-        emailAddress += "@" + domain;
-        return emailAddress;
-    }
 
 
     @Test
@@ -48,17 +36,12 @@ public class RegisterTest extends BaseTestRunner {
         softAssert.assertTrue(actualPasswordResult);
 
         boolean actualResult = new RegisterPage(driver)
-                .enterEmail(generateRandomEmailAddress("gmail.com"))
+                .enterEmail(generateRandomEmailAddress())
                 .enterPassword("D8065479")
                 .enterConfirmPassword("D8065479")
                 .clickRegisterButton()
                 .successfulRegisterMessageDisplayed("Your registration completed");
         softAssert.assertTrue(actualResult);
-
-//        boolean fkldf = new RegisterPage(driver)
-//                .clickContinueButton()
-//                .homePageMainTitle();
-//        softAssert.assertTrue(fkldf);
         softAssert.assertAll();
 
 

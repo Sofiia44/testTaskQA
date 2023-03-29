@@ -1,6 +1,7 @@
 package test.task.ui.runners;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -30,6 +31,11 @@ public class BaseTestRunner {
         context.setAttribute("myDriver", driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(configProperties.getBaseWebUrl());
+    }
+
+    @Test
+    protected String generateRandomEmailAddress() {
+        return RandomStringUtils.randomAlphanumeric(10) + "@gmail.com";
     }
 
     @AfterMethod

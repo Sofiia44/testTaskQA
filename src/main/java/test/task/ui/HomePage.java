@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import test.task.ui.Pages.ComputersPO.ComputersProducts;
 import test.task.ui.pageComponents.CategoriesSideComponent;
 
-import static org.openqa.selenium.By.xpath;
+import static org.openqa.selenium.By.*;
 
 public class HomePage extends CategoriesSideComponent {
     private WebElement computers = driver.findElement(xpath("//div[@class='listbox']//a[contains(text(),'Computers')]"));
